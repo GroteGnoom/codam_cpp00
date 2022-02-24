@@ -43,11 +43,11 @@ void print_phonebook(PhoneBook phonebook) {
 }
 
 void print_contact(Contact contact) {
-	std::cout << contact.first_name << std::endl;
-	std::cout << contact.last_name << std::endl;
-	std::cout << contact.nickname << std::endl;
-	std::cout << contact.phone_number << std::endl;
-	std::cout << contact.darkest_secret << std::endl;
+	std::cout << "First name: " << contact.first_name << std::endl;
+	std::cout << "Last name: " << contact.last_name << std::endl;
+	std::cout << "Nickname: " << contact.nickname << std::endl;
+	std::cout << "Phone number: " << contact.phone_number << std::endl;
+	std::cout << "Darkest secret: " << contact.darkest_secret << std::endl;
 }
 
 int main() {
