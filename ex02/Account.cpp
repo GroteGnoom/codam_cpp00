@@ -1,8 +1,8 @@
 #include "Account.hpp"
 #include <iostream>
 #include <ctime>
-// the constructor prints out creation, destructor prints out closed
 
+// https://stackoverflow.com/questions/185844/how-to-initialize-private-static-members-in-c 
 int Account::_nbAccounts = 0;
 int Account::_totalAmount = 0;
 int Account::_totalNbDeposits = 0;
@@ -69,8 +69,6 @@ bool Account::makeWithdrawal(int a)
 	if (_amount >= a) {
 		_totalAmount -= a;
 		_totalNbWithdrawals++;
-
-
 		_amount -= a;
 		_nbWithdrawals++;
 		std::cout << a << ";amount:" << _amount << ";nb_withdrawals:" << _nbWithdrawals << std::endl;
@@ -83,6 +81,3 @@ bool Account::makeWithdrawal(int a)
 int	Account::checkAmount(void) const {
 	return (_amount);
 }
-
-
-
