@@ -1,24 +1,20 @@
 #ifndef PHONENOOK_HPP
 #define PHONENOOK_HPP
 
-#ifndef DEBUG
-#define DEBUG 0
-#endif
-
-class Contact {
-	public:
-		std::string first_name;
-		std::string last_name;
-		std::string nickname;
-		std::string phone_number;
-		std::string darkest_secret;
-};
+#include "Contact.hpp"
+#include <array>
 
 class PhoneBook {
 	public:
-		int next_contact;
-		int nr_contacts;
-		Contact contacts[8];
+		void add_contact();
+		void print();
+		bool index_exists(int index);
+		void print_contact(int index);
+		PhoneBook();
+	private:
+		int _next_contact;
+		int _nr_contacts;
+		std::array<Contact, 8> _contacts;
 };
 
 #endif /* PHONENOOK_HPP */

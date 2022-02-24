@@ -1,5 +1,5 @@
 NAME = phonebook
-SRC = main.cpp
+SRC = main.cpp utils.cpp PhoneBook.cpp Contact.cpp
 
 ifdef DEBUG
 	CC=clang++
