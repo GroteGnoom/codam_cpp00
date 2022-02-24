@@ -1,7 +1,7 @@
 #include <string>
 #include <iostream>
 #include <iomanip>
-#include "phonebook.hpp"
+#include "PhoneBook.hpp"
 
 std::string trunc(std::string str) {
 	if (str.size() <= 10)
