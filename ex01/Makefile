@@ -3,7 +3,7 @@ SRC = main.cpp
 
 ifdef DEBUG
 	CC=clang++
-	FLAGS = -Wall -Wextra -fsanitize=address -DDEBUG=1 -g -std=c++98
+	FLAGS = -Wall -Wextra -fsanitize=address -DDEBUG=1 -g -std=c++98 -DDEBUG=1
 else
 	CC=c++
 	FLAGS = -Wall -Wextra -Werror
