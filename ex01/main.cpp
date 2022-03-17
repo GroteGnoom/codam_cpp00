@@ -10,19 +10,24 @@
 int main() {
 	PhoneBook phonebook;
 	std::string input;
-	while (1) {
+
+	while (std::cin) {
 		std::cout << "Please input 'ADD', 'SEARCH' OR 'EXIT'." << std::endl;
 		std::getline(std::cin, input);
 		if (input == "ADD") {
 			phonebook.add_contact();
 		}
 		else if (input == "SEARCH") {
+			if (!phonebook.index_exists(0)) {
+				std::cout << "No contacts found." << std::endl;
+				continue;
+			}
 			phonebook.print();
-			while (1) {
+			while (std::cin) {
 				int index;
+				char *endptr;
 				std::cout << "Please select a contact index." << std::endl;
 				std::getline(std::cin, input);
-				char *endptr;
 				index = strtol(input.c_str(), &endptr, 10);
 				index--;
 				if (strlen(endptr) > 0 || !phonebook.index_exists(index)) {
