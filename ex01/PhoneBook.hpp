@@ -6,11 +6,11 @@
 
 class PhoneBook {
 	public:
+		PhoneBook();
 		void add_contact();
 		void print();
 		bool index_exists(int index);
 		void print_contact(int index);
-		PhoneBook();
 	private:
 		int _next_contact;
 		int _nr_contacts;
