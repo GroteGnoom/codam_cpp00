@@ -7,6 +7,8 @@ void get_field(std::string prompt, std::string &field) {
 	{
 		std::cout << "Please enter " << prompt << ":" << std::endl;
 		std::getline(std::cin, field);
+		if (!std::cin)
+			exit(1);
 		if (field.length() == 0)
 			std::cout << "Empty fields are not allowed." << std::endl;
 		else
